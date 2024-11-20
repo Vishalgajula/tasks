@@ -1,0 +1,39 @@
+/* Example of some intermediate CSS styling */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}

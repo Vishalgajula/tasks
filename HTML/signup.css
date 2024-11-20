@@ -1,0 +1,11 @@
+@font-face {
+  font-family: Sans forgetica;
+  src: url(SansForgetica-Regular.woff);
+}
+
+* {
+  background-color: #111111;
+  color: white;
+  margin: auto;
+  font-family: Sans forgetica;
+}

@@ -1,0 +1,33 @@
+@font-face {
+  font-family: Sans forgetica;
+  src: url(SansForgetica-Regular.woff);
+}
+
+* {
+  font-family: Sans forgetica;
+}
+
+body {
+  background-image: url(japan-background-digital-art.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.header a {
+  text-decoration: none;
+  color: inherit;
+  /* background-color: black; */
+  backdrop-filter: blur(100%) saturation(70%);
+  margin: 10px;
+}
+
+.header ul {
+  list-style-type: none;
+
+}
+
+.header {
+  width: min-content;
+  padding: 20px;
+  margin: 0 auto;
+}

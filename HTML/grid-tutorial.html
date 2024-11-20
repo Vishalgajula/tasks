@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    
+    .grid-basic {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .grid-areas {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .grid-responsive {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .grid-advanced {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 100px);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .box {
+      padding: 20px;
+      background: #007bff;
+      color: white;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .header { grid-area: header; background: #28a745; }
+    .sidebar { grid-area: sidebar; background: #dc3545; }
+    .main { grid-area: main; background: #ffc107; color: black; }
+    .footer { grid-area: footer; background: #17a2b8; }
+    
+    .span-2 {
+      grid-column: span 2;
+      background: #6610f2;
+    }
+    
+    .span-row-2 {
+      grid-row: span 2;
+      background: #fd7e14;
+    }
+    
+    h3 {
+      margin: 20px 0 10px 0;
+      color: #333;
+    }
+    
+    .comment {
+      margin: 10px 0;
+      color: #666;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>1. Basic Grid Layout</h3>
+    <div class="comment">Simple 3-column grid with equal widths</div>
+    <div class="grid-basic">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+    
+    <h3>2. Grid Template Areas</h3>
+    <div class="comment">Layout using named grid areas</div>
+    <div class="grid-areas">
+      <div class="box header">Header</div>
+      <div class="box sidebar">Sidebar</div>
+      <div class="box main">Main Content</div>
+      <div class="box footer">Footer</div>
+    </div>
+    
+    <h3>3. Responsive Grid</h3>
+    <div class="comment">Auto-adjusting columns based on container width</div>
+    <div class="grid-responsive">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+    </div>
+    
+    <h3>4. Advanced Grid Layout</h3>
+    <div class="comment">Mixed column and row spans</div>
+    <div class="grid-advanced">
+      <div class="box span-2">Spans 2 columns</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box span-row-2">Spans 2 rows</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box span-2">Spans 2 columns</div>
+      <div class="box">9</div>
+    </div>
+  </div>
+</body>
+</html>

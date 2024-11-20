@@ -1,0 +1,27 @@
+.circle {
+  background-color: green;
+  border: 2px solid black;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-left: 50px solid blue;
+  border-right: 50px solid red;
+  border-bottom: 100px solid green;
+  border-top: 50px solid orange;
+  border: 2px soild black;
+  /* rotate: 45deg; */
+  margin-left: 10rem;
+}
+
+.star {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid green;
+}

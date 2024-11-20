@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      margin: 20px;
+      padding: 20px;
+      background: #f5f5f5;
+      border-radius: 8px;
+    }
+    
+    .flex-example {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .grid-example {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .box {
+      padding: 20px;
+      background: #007bff;
+      color: white;
+      border-radius: 4px;
+      text-align: center;
+    }
+    
+    .grid-area-example {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+      gap: 10px;
+    }
+    
+    .header { grid-area: header; background: #28a745; }
+    .sidebar { grid-area: sidebar; background: #dc3545; }
+    .main { grid-area: main; background: #ffc107; color: black; }
+    .footer { grid-area: footer; background: #17a2b8; }
+    
+    .flex-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    
+    h3 {
+      margin: 20px 0 10px 0;
+      color: #333;
+    }
+    
+    .comment {
+      margin: 10px 0;
+      color: #666;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>Flexbox: One-dimensional Layout</h3>
+    <div class="comment">Perfect for rows OR columns - works in a single direction</div>
+    <div class="flex-example">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    
+    <h3>Flexbox: Column Direction</h3>
+    <div class="flex-stack">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    
+    <h3>Grid: Two-dimensional Layout</h3>
+    <div class="comment">Perfect for rows AND columns - works in both directions simultaneously</div>
+    <div class="grid-example">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+    
+    <h3>Grid: Complex Layout with Areas</h3>
+    <div class="comment">Grid allows named template areas - impossible with Flexbox</div>
+    <div class="grid-area-example">
+      <div class="box header">Header</div>
+      <div class="box sidebar">Sidebar</div>
+      <div class="box main">Main Content</div>
+      <div class="box footer">Footer</div>
+    </div>
+  </div>
+</body>
+</html>

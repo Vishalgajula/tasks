@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation Page</title>
+  <link rel="stylesheet" href="ReservationForm.css">
+</head>
+
+<body>
+  <div class="header">
+    <h1>Eva Restaurant</h1>
+    <div class="pages">
+      <a href="index.html">Home</a>
+      <a href="ReservationForm.html">Reservation</a>
+      <a href="About.html">About us</a>
+    </div>
+  </div>
+
+  <h2 class="heading">Fill the reservation form to secure your table</h2>
+  <div class="container">
+    <form action="" class="reservation">
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="John Doe" minlength="3" required><br>
+
+      <label for="guests">Number of Guests </label>
+      <input type="number" id="guests" placeholder="1"><br>
+
+      <label for="date">Date</label>
+      <input type="date" id="date" required><br>
+
+      <label for="time">Time</label>
+      <input type="time" id="time" required><br>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="example@email.com" required><br>
+
+      <label for="mobile">Mobile</label>
+      <input type="tel" id="mobile" minlength="10" maxlength="10" placeholder="9998887776" required><br>
+
+      <label for="request">Special Request</label>
+      <textarea name="" id="request" maxlength="200"
+        placeholder="Let us know how we can make your experience even more memorable."></textarea><br>
+
+      <input type="submit" value="submit">
+    </form>
+    <div class="bg-img"></div>
+  </div>
+</body>
+
+</html>

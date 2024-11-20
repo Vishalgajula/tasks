@@ -1,0 +1,151 @@
+@font-face {
+  font-family: Sans forgetica;
+  src: url(SansForgetica-Regular.woff);
+}
+
+body {
+  background-color: #040f0f;
+  color: white;
+  margin: 0;
+}
+
+h1 {
+  font-family: Sans forgetica;
+  font-size: 5rem;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.pages {
+  display: flex;
+  gap: 50px;
+  margin: 0 20px;
+  /* list-style-type: none; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 2rem;
+}
+
+.Welcome-Note {
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  filter: blur(5px);
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+
+}
+
+.Welcome-Note>p {
+  font-size: 3rem;
+  margin: 50px;
+  padding: 100px;
+  text-shadow: 0 0 0.15em #000000;
+}
+
+
+.quote {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 50px 0;
+}
+
+/* This is the horizontal scroll section */
+.country_list {
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  gap: 50px;
+  text-align: center;
+  font-family: Sans forgetica;
+  font-size: 2.5rem;
+
+}
+
+.slide {
+  margin: 0;
+  object-fit: contain;
+  /* width: 400px; */
+
+}
+
+.slide-img {
+  border-radius: 100px;
+  width: 400px;
+}
+
+/* Reservation section */
+.reservation-title {
+  font-family: Sans forgetica;
+  text-align: center;
+  font-size: 3rem;
+  margin: 50px;
+}
+
+.reservation {
+  margin: auto;
+  width: 800px;
+  font-size: 1.8rem;
+  text-align: center;
+  padding-inline: 25%;
+  border-radius: 50px;
+  text-shadow: 0 0 0.25em #000000;
+}
+
+.background-img-reser {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover;
+  filter: blur(4px);
+}
+
+.overlay-reserv {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.reservation-btn {
+  color: beige;
+  padding: 15px 50px;
+  font-size: 2rem;
+  background-color: #49111c;
+  border-style: none;
+  border-radius: 20px;
+}
