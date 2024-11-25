@@ -1,0 +1,348 @@
+$primary-color: #333333;
+$backgroung-color: #a9a9a9;
+$cards-color: #c2c2c2;
+
+// Breakpoints
+$tablet: 768px;
+$mobile: 480px;
+
+// Transitions
+$transition-standard: all 0.3s ease;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $primary-color;
+  background-color: $backgroung-color;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+
+  @media (max-width: $tablet) {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 1rem;
+    padding: 0 0.25rem;
+  }
+
+  .header {
+    margin: 0.5rem auto;
+    width: 98%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+
+    a {
+      text-decoration: none;
+      text-align: center;
+      color: inherit;
+      padding: 0.5rem 0.8rem;
+      float: left;
+      background-color: $cards-color;
+      width: 23.5%;
+      margin-right: 2%;
+      margin-bottom: 1rem;
+      transition: $transition-standard;
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+      }
+
+      @media (max-width: $tablet) {
+        width: 48%;
+        margin-right: 4%;
+        margin-bottom: 1rem;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: $mobile) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.75rem;
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+
+        @media (max-width: $tablet) {
+          margin-right: 4%;
+          margin-bottom: 1rem;
+
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  .container {
+    margin: 0.5rem auto;
+    width: 98%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+
+    .main-img {
+      float: left;
+      width: 80%;
+      height: 35rem;
+      background: url(logo/Main-img.jpg) center/cover;
+      color: white;
+      position: relative;
+
+      @media (max-width: $tablet) {
+        width: 100%;
+        height: 30rem;
+        float: none;
+        margin-bottom: 1rem;
+      }
+
+      @media (max-width: $mobile) {
+        height: 25rem;
+      }
+
+
+      .main-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        padding: 0 2vw;
+
+        h2 {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+
+          @media (max-width: $tablet) {
+            font-size: 2rem;
+          }
+
+          @media (max-width: $mobile) {
+            font-size: 1.8rem;
+          }
+        }
+
+        p {
+          margin-bottom: 1.5rem;
+
+          @media (max-width: $mobile) {
+            padding-right: 2vw;
+          }
+        }
+
+        button {
+          padding: 0.75rem 1.5rem;
+          border: none;
+          color: $cards-color;
+          cursor: pointer;
+          background-color: $primary-color;
+          transition: $transition-standard;
+
+          &:hover {
+            background: white;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .subscription {
+      float: right;
+      width: 19%;
+      height: 35rem;
+      text-align: center;
+
+      @media (max-width: $tablet) {
+        width: 100%;
+        height: auto;
+        float: none;
+        overflow: hidden;
+      }
+
+      .membership {
+        background-color: $cards-color;
+        margin-bottom: 1rem;
+        height: calc(50% - 0.5rem);
+        padding: 1.5rem;
+        position: relative;
+        transition: $transition-standard;
+
+        &:hover {
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          transform: translateY(-5px);
+        }
+
+        @media (max-width: $tablet) {
+          height: 200px;
+          width: 48%;
+          float: left;
+          margin-right: 4%;
+
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+        }
+
+        @media (max-width: $mobile) {
+          width: 100%;
+          margin-right: 0;
+          height: 180px;
+        }
+
+        .membership-content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 80%;
+        }
+
+        h4 {
+          margin-bottom: 1rem;
+        }
+
+        p {
+          margin-top: 1.5rem;
+          font-size: 2rem;
+
+          @media (max-width: $tablet) {
+            margin-top: 1rem;
+            font-size: 1.8rem;
+          }
+
+          @media (max-width: $mobile) {
+            margin-top: 0.75rem;
+            font-size: 1.6rem;
+          }
+        }
+
+        button {
+          font-size: 1.4rem;
+          background-color: $primary-color;
+          color: white;
+          padding: 1vh 1vw;
+          border: none;
+          cursor: pointer;
+          transition: $transition-standard;
+          margin-top: 1rem;
+
+          &:hover {
+            background: white;
+            color: $primary-color;
+          }
+
+          @media (max-width: $mobile) {
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .services {
+    text-align: center;
+    margin: 1%;
+    width: 98%;
+    overflow: hidden;
+    padding: 1rem 0;
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .card {
+      float: left;
+      background-color: $cards-color;
+      width: 23.5%;
+      margin-right: 2%;
+      margin-bottom: 1rem;
+      padding: 2rem;
+      min-height: 280px;
+      position: relative;
+      transition: $transition-standard;
+
+      @media (max-width: $tablet) {
+        width: 48%;
+        margin-right: 4%;
+        min-height: 250px;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: $mobile) {
+        width: 100%;
+        margin-right: 0;
+        min-height: 220px;
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+
+        @media (max-width: $tablet) {
+          margin-right: 4%;
+
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+      }
+    }
+
+    .card-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+
+      img {
+        width: 4vw;
+        margin-bottom: 1rem;
+
+        @media (max-width: $tablet) {
+          width: 6vw;
+        }
+
+        @media (max-width: $mobile) {
+          width: 12vw;
+        }
+      }
+
+      h4 {
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        @media (max-width: $mobile) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

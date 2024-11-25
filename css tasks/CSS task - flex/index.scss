@@ -1,0 +1,144 @@
+$primary-color : #333333;
+$backgroung-color : #a9a9a9;
+$cards-color : #c2c2c2;
+
+@mixin pricing {
+  background-color: $cards-color;
+  padding: 2rem 0rem;
+  // margin-left: 2vw;
+  // flex-grow: 1;
+  flex: 1 1;
+
+  p {
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1.4rem;
+    background-color: #333333;
+    color: white;
+    padding: 1vh 1vw;
+    border: none;
+    // margin-top: 1rem;
+  }
+}
+
+@mixin footer-cards {
+  background-color: $cards-color;
+  text-align: center;
+  flex: 1 1 15rem;
+  padding: 2rem 3rem;
+
+  img {
+    width: 4vw;
+  }
+}
+
+body {
+  color: $primary-color;
+  background-color: $backgroung-color;
+  padding: 0 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+// header section
+
+.header {
+  font-size: 1.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+
+  a {
+    flex: 1 1;
+    flex-basis: 20rem;
+    text-align: center;
+    padding: 0.8rem 0.5rem;
+    color: $primary-color;
+    text-decoration: none;
+    background-color: $cards-color;
+
+  }
+}
+
+// Main container  
+
+.container {
+  display: flex;
+  // position: relative;
+  flex-wrap: wrap;
+  gap: 1rem;
+  // min-height: 60vh;
+
+  .main-img {
+    // text-align: left;
+    // line-height: 60vh;
+    flex: 6;
+    color: white;
+    max-height: 100%;
+    flex-basis: auto;
+    background: url(logo/Main-img.jpg) center/cover;
+
+    h2 {
+      margin-top: 20vh;
+      margin-left: 2vw;
+      font-size: 3rem;
+    }
+
+    p {
+      margin-left: 2vw;
+    }
+
+    button {
+      margin-left: 2vw;
+      padding: 1.5vh 1.5vw;
+      border: none;
+      font-size: 1rem;
+      color: $cards-color;
+      background-color: $primary-color;
+    }
+  }
+
+  // subscription services
+
+  .subscription {
+    // height: 63vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    flex: 1 1 auto;
+
+    .membership {
+      @include pricing()
+    }
+
+    .pro-membership {
+      @include pricing()
+    }
+
+  }
+
+}
+
+// Footer section about services
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+
+
+  .card {
+    @include footer-cards();
+    // max-width: 25vw;
+
+  }
+
+}
