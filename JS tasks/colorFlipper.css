@@ -1,0 +1,21 @@
+body {
+  margin: auto;
+  width: 400px;
+}
+
+.color-box {
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  margin: 25px 0;
+}
+
+button {
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: cornflowerblue;
+  border: none;
+  width: 100px;
+  height: 50px;
+}
