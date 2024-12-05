@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Throttling Mouse Move</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Mouse Move Event with Throttling</h3>
+  <p>Move your mouse over this area to see throttling in action.</p>
+  <p class="count"></p>
+  <div class="output" id="mouseOutput">Mouse Position: -</div>
+
+  <script>
+    function throttle(func, interval) {
+      let lastCall = 0;
+      return function (...args) {
+        const now = Date.now();
+        if (now - lastCall >= interval) {
+          func.apply(this, args);
+          lastCall = now;
+        }
+      };
+    }
+    let count = 0
+
+    function updateMousePosition(event) {
+      count++;
+      const position = `X: ${event.clientX}, Y: ${event.clientY}`;
+      document.getElementById("mouseOutput").innerText = `Mouse Position: ${position}`;
+      console.log(position);
+      document.querySelector('.count').textContent = `No of times event triggered ${count}`;
+    }
+
+    const throttledMouseMove = throttle(updateMousePosition, 500);
+
+    document.addEventListener("mousemove", throttledMouseMove);
+  </script>
+</body>
+
+</html>
